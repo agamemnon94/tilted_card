@@ -1,0 +1,1 @@
+## Card rotation animation
