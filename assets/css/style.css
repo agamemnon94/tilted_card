@@ -38,14 +38,26 @@ h1 {
 /******************/
 
 .tilted-section {
+  position: relative;
   padding: 140px 24px 40px;
   background-image: radial-gradient(at center, #4d4d4d, #0e0e0e);
-  height: 100svh;
+  height: 70svh;
   /* ↓ Pour tester du  contenu au dessus et en dessous */
   /* height: 50svh; */
+
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+
   perspective: 2000px;
 
   & .tilted-section__card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: center;
+
     /* carte orizontal  */
     max-width: 1000px;
     aspect-ratio: 1/0.4;
@@ -54,13 +66,15 @@ h1 {
     /* max-width: 300px; 
     aspect-ratio: 1/2; */
 
-    margin: 0 auto;
+    /* margin: 0 auto; */
+    will-change: transform;
     border-radius: 25px;
     transform-style: preserve-3d;
     pointer-events: none;
     background-color: #f1f1f1;
     position: relative;
     transition: transform 0.2s ease-out;
+    box-shadow: 2px 2px 7px #111;
 
     & .tilted-section__bg_video {
       position: absolute;
