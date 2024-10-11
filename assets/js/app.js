@@ -11,7 +11,7 @@ if (window.matchMedia("(pointer:fine)").matches) {
 
     // ↓ On sélectionne la carte directement liée à son container ↓
     const tiltedCard = tiltedSection.querySelector(".tilted-section__card");
-
+    const titltXY = 30;
     function handelTiltEffect(e) {
       const tiltedSectionDimensions = tiltedSection.getBoundingClientRect();
       // On récupère l'élément à animer
